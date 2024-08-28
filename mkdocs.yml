@@ -4,7 +4,8 @@ theme:
   name: readthedocs
   logo: assets/logocaminas.png
 nav:
-  - Introducción: Introduccion.md
+  - Introducció: Introduccion.md
+  - Instalació IntelliJ Idea Ultimate: Idea.md
   - Tema 1-Sistema de fitxers: https://asalvadorc.github.io/AD_Tema1
   - Tema 2-Model Gestió del contingut de fitxers: https://asalvadorc.github.io/AD_Tema2
   - Tema 3-Fitxers de diferents formats: https://asalvadorc.github.io/AD_Tema3
