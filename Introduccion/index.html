@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://asalvadorc.github.io/AccDatos/Introduccion/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Introducció - AD - Access a Dades</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Introducci\u00f3";
+        var mkdocs_page_input_path = "Introduccion.md";
+        var mkdocs_page_url = "/AccDatos/Introduccion/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../assets/logocaminas.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Introducció</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../Idea/">Instalació IntelliJ Idea Ultimate</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://asalvadorc.github.io/AD_Tema1">Tema 1-Sistema de fitxers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://asalvadorc.github.io/AD_Tema2">Tema 2-Model Gestió del contingut de fitxers</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://asalvadorc.github.io/AD_Tema3">Tema 3-Fitxers de diferents formats</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">AD - Access a Dades</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Introducció</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="introduccion">Introducción</h1>
+<p>¿A qué nos referimos cuando hablamos de <strong>acceso a datos</strong> en una aplicación informática?</p>
+<p>Podemos afirmar que en la inmensa mayoría de aplicaciones informáticas se pueden diferenciar, a grandes rasgos, en dos partes:</p>
+<ul>
+<li>Por un lado, el programa propiamente dicho, que realiza las operaciones deseadas con los datos necesarios.</li>
+<li>Por otro lado, los datos con los que opera le programa. Esos datos pueden ser obtenidos por el programa mediante diversos métodos: leídos mediante teclado, escaneados, leídos de algún soporte de almacenamiento secundario, etc.
+En la mayoría de los casos, cuando programamos, nos interesa que el programa guarde los datos que le hemos introducido, o los resultados que dicho programa haya obtenido, de manera que si el programa termina su ejecución, los datos no se pierdan y puedan ser recuperados posteriormente, es decir, persistan. Una forma tradicional de hacer esto es mediante la utilización de ficheros o de bases de datos que se guardarán en un dispositivo de memoria no volátil (normalmente un disco).</li>
+</ul>
+<p>Te habrás dado cuenta de que el almacenamiento en memoria RAM, mediante variables o vectores, es temporal, los datos se pierden cuando el programa termina. Quizás te habrá pasado alguna vez que, debido a un apagón eléctrico, has perdido el trabajo que estabas haciendo, que todavía no habías grabado. Los datos que se guardan en almacenamiento secundario, como ficheros o bases de datos, se denominan datos persistentes, porque existen, o persisten más allá de la ejecución de la aplicación.</p>
+<p>Ese almacenamiento secundario de datos que acabamos de mencionar, habitualmente suele consistir en una base de datos relacional, si bien, a veces, hay otros métodos de almacenamiento, y por tanto, métodos de acceso a esos datos. De conocer esos tipos de almacenamiento y cómo acceder a ellos es de lo que trata este módulo.</p>
+<p>En esta unidad inicial, vas a ver una panorámica de los diversos métodos de persistencia que encontramos en el mercado.</p>
+<h1 id="acceso-a-datos">Acceso a Datos</h1>
+<p>Hay diversas estrategias de acceso a datos para gestionar la persistencia de los datos:</p>
+<ul>
+<li>Mediante ficheros.</li>
+<li>Bases de datos, que pueden ser:
+Relacionales, Orientadas a objetos,
+Objeto-relacionales.</li>
+<li>Mapeo objeto relacional (ORM).</li>
+<li>Bases de datos XML (eXtensible Markup Language).</li>
+<li>Componentes.</li>
+</ul>
+<p>Al principio, en los primeros tiempos de la informática, los datos se guardaban en ficheros convencionales. Con el tiempo, y la experiencia de trabajar con dichos ficheros, se observaron los inconvenientes de los ficheros, y para intentar solucionar los inconvenientes que se observaron surgieron las bases de datos, que entre otras ventajas permitían:</p>
+<ul>
+<li>Eliminar el problema de la información redundante.</li>
+<li>Eliminar información inconsistente.</li>
+<li>Globalizar o centralizar la información.</li>
+<li>Garantizar el mantenimiento de la integridad en la información. Únicamente se almacena la información correcta.</li>
+<li>Independencia de datos. La independencia de datos implica una separación entre programas y datos, es decir, se pueden hacer cambios en la información que contiene la base de datos, o tener acceso a la base de datos de diferente manera, sin tener que hacer cambios en las aplicaciones o en los programas.</li>
+</ul>
+<h2 id="que-estrategia-o-metodo-de-acceso-a-datos-usar">Qué estrategia o método de acceso a datos usar.</h2>
+<p>Posteriormente, con la aparición y expansión de la programación orientada a objetos, empezaron a surgir las Bases de datos orientadas a objetos, y también se ampliaron algunas bases de datos relacionales, añadiéndoles extensiones de orientación a objetos.</p>
+<p>Entonces ¿qué método de acceso a datos es mejor? ¿Cuál deberías utilizar en la próxima aplicación que construyas?</p>
+<p>Pues..., no hay una respuesta fácil para esas preguntas, no se puede afirmar que haya un método que sea el mejor de manera absoluta. Más bien, la cuestión es tener claro qué tipo de aplicación hay que construir y, según eso, estudiar qué tipo de sistema de almacenamiento será mejor usar: si una base de datos orientada a objetos, o una base de datos XML, etc.</p>
+<p>Conociendo el funcionamiento de las diferentes alternativas podemos comparar sus prestaciones al problema de la persistencia concreto que se nos presente. Cada una de las tecnologías tiene su propio origen y filosofía para alcanzar el mismo fin y, por esta razón, no es fácil analizar sus ventajas y desventajas frente a las demás alternativas.</p>
+<p>Por poner un ejemplo, lo más sencillo posible: si voy a crear una base de datos para guardar mi colección de vídeos, probablemente no me va a interesar utilizar una base de datos Oracle, sino un producto mucho más barato, y sencillo de instalar y mantener.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Idea/" class="btn btn-neutral float-right" title="Instalació IntelliJ Idea Ultimate">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+      <span><a href="../Idea/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
